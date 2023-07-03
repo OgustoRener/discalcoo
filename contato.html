@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discalço - Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="margin: 0px;">
+    <header>
+        <nav class="navbar">
+            <a href="index.html" id="logo">
+                <img src="img/logo.png">
+            </a>
+            <input type="checkbox" id="toggler">
+            <label for="toggler"><img src="img/menu-icon.png"></label>
+            <div class="menu">
+                <ul class="list">
+                    <li>
+                        <div class="discos">
+                            <a href="nacional.html"><span>Discos Nacionais</span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="discos">
+                            <a href="internacional.html"><span>Discos Internacionais</span></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <script>
+        function enviar(event) {
+            event.preventDefault();
+
+            var nome = document.getElementById("nome").value;
+            var data = document.getElementById("data").value;
+            var telefone = document.getElementById("telefone").value;
+            var email = document.getElementById("email").value;
+            var usuario = document.getElementById("usuario").value;
+            var senha = document.getElementById("senha").value;
+            var dados = document.getElementById("dados");
+            var campo = document.getElementById("campo").value;
+            if (nome.value != "") {
+            dados.innerHTML = "Seus Dados:<br><br>" + "Nome: " + nome + "<br>" + "Nascimento: " + data + "<br>"
+                + "Telefone de Contato: " + telefone + "<br>" + "E-mail de Contato: " +
+                email + "<br>" + "Usuário: " + usuario + "<br>" + "Senha: " + senha + "<br>" + "Mensagem: "
+                + campo;
+            }
+        }
+
+        function limpar() {
+            document.getElementById("nome").value = "";
+            document.getElementById("data").value = "";
+            document.getElementById("telefone").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("usuario").value = "";
+            document.getElementById("senha").value = "";
+            document.getElementById("dados").innerHTML = "";
+        }
+    </script>
+    <h1 class="icones" style="font-size: xx-large;">PREENCHA OS DADOS</h1>
+    <div class="navegador2">
+        <form class="icones2" onsubmit="enviar(event)">
+            <div class="itens">
+                <label for="nome">Nome: </label>
+                <input id="nome" class="entrada" type="text" placeholder="Ex: Antônio das Mortes" required="required"
+                    name="nome"><br>
+            </div>
+            <div class="itens">
+                <label for="telefone">Telefone: </label>
+                <input id="telefone" class="entrada" type="tel" placeholder="(XX)XXXXX-XXXX" required="required"><br>
+            </div>
+            <div class="itens">
+                <label for="email">Email: </label>
+                <input id="email" class="entrada" type="email" placeholder="antoniodasmortes@mail.com" name="email"
+                    required="required"><br>
+            </div>
+            <div class="itens">
+                <label for="date">Nascimento:</label>
+                <input id="data" class="entrada" type="date" required="required">
+            </div>
+            <div class="itens">
+                <label for="text">Usuário: </label>
+                <input id="usuario" class="entrada" type="text" required>
+            </div>
+            <div class="itens">
+                <label for="password">Senha: </label>
+                <input id="senha" class="entrada" type="password" required>
+            </div>
+            <div class="itens">
+                <textarea id="campo" class="entrada2" placeholder="O que você achou da lista?"></textarea>
+            </div>
+            <table>
+                <tr>
+                    <td>
+                        <div align="center">
+                            <input type="submit" class="enviar botao" value="Enviar">
+                        </div>
+                    </td>
+                    <td>
+                        <div align="center">
+                            <input type="button" class="cancelar botao" value="Cancelar" onclick="limpar()">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div id="dados"></div>
+</body>
+
+</html>

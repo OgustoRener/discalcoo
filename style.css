@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+:root {
+    --cor--primaria: #556b2f;
+    --cor--secundaria: #faebd7;
+    --fonte--principal: 'Concert One', sans-serif;
+}
+
+body {
+    background-color: var(--cor--secundaria);
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 15px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.discos {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.discos li {
+    list-style: none;
+}
+
+.discos a {
+    font-family: var(--fonte--principal);
+}
+
+.menu {
+    font-size: 25px;
+    color: black;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navegador {
+    margin-top: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    padding-left: 0px;
+}
+
+.navegador2 {
+    margin: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0px;
+}
+
+.imagem {
+    transition: transform .5s;
+}
+
+.imagem:hover {
+    transform: scale(1.1);
+}
+
+.imagem img {
+    width: 100%;
+}
+
+.icones {
+    color: black;
+    font-family: var(--fonte--principal);
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.icones2 {
+    color: var(--cor--primaria);
+    font-family: var(--fonte--principal);
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+
+}
+
+.formulario div {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+}
+
+.entrada {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.entrada2 {
+    width: 400px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.itens {
+    margin-top: 15px;
+    display: flex;
+}
+
+#dados {
+    color: black;
+    font-family: var(--fonte--principal);
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.botao{
+    color: var(--cor--primaria);
+    font-family: var(--fonte--principal);
+    background-color: var(--cor--secundaria);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#toggler,
+.navbar label {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .men .list {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .navbar label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #toggler:checked~.menu {
+        max-height: 100%;
+        overflow: visible;
+    }
+
+    .conteiner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .personagens-content {
+        position: absolute;
+        z-index: 99;
+    }
+}
